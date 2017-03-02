@@ -1,0 +1,142 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#game
+{
+	width: 241px;
+	height: 264px;
+	background-color: rgb(227, 227, 227);
+	border: 1px solid rgb(125,125,125);
+}
+
+.header
+{
+	height: 64px;
+	background: url('i/logo.png') no-repeat center center rgb(163,196,44);
+}
+
+.door
+{
+	cursor: pointer;
+	position: relative;
+}
+
+.doors
+{
+	height: 137px;
+	background: url('i/background_doors.jpg');
+	position: relative;
+	overflow: hidden;
+}
+
+.curtain
+{
+	-webkit-transition: transform 0.4s ease;
+	-moz-transition: transform 0.4s ease;
+	-ms-transition: transform 0.4s ease;
+	-o-transition: transform 0.4s ease;
+	transition: transform 0.4s ease;
+	position: relative;
+	height: 72px;
+	width: 56px;
+	overflow: hidden;
+}
+
+.curtain.open {
+	-webkit-transform: translateY(-40px);
+	-moz-transform: translateY(-40px);
+	-ms-transform: translateY(-40px);
+	-o-transform: translateY(-40px);
+	transform: translateY(-40px);
+}
+
+.light
+{
+	height: 82px;
+	width: 67px;
+	position: absolute;
+	top: -7px;
+	left: -6px;
+}
+
+.door .light_rotation_0
+{
+	background: url('i/lighting_run0.png');
+}
+
+.door .light_rotation_1
+{
+	background: url('i/lighting_run1.png');
+}
+
+.door .light_rotation_2
+{
+	background: url('i/lighting_run2.png');
+}
+
+.door .light_selected
+{
+	background: url('i/lighting_color0.png');
+}
+
+#door1
+{
+	position: absolute;
+	left: 21px;
+	top: 36px;
+}
+
+#door2
+{
+	position: absolute;
+	left: 92px;
+	top: 36px;
+}
+
+
+
+#door3
+{
+	position: absolute;
+	left: 163px;
+	top: 36px;
+}
+
+
+.result
+{
+	position: absolute;
+}
+
+.playtext
+{
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	padding: 22px;
+	display: block;
+}
+
+.playbutton
+{
+	text-align: center;
+	font-family: Arial;
+	font-weight: bold;
+	color: rgb(255,255,255);
+	background-color: rgb(163,196,44);
+	margin: 16px;
+	padding: 6px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.playbutton:hover
+{
+	background-color: rgb(123,196,44);
+}

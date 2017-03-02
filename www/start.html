@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<script src="/apps/api/knuddels-api.js"></script>
+
+		<script>
+			Client.includeCSS('style.css');
+//			Client.includeJS('/apps/api/jquery.min.js');
+			Client.includeJS('app.js');
+		</script>
+	</head>
+	<body>
+		<div id="game">
+			<div class="header"></div>
+			<div class="doors">
+				<div class="door" id="door1">
+					<img src="i/result_goat.gif" class="result" id="result1" />
+					<div class="curtain"><img src="i/door_curtain.png" /></div>
+					<div class="light light_rotation_0"></div>
+				</div>
+				<div class="door" id="door2">
+					<img src="i/result_goat.gif" class="result" id="result2" />
+					<div class="curtain"><img src="i/door_curtain.png" /></div>
+					<div class="light light_rotation_0"></div>
+				</div>
+				<div class="door" id="door3">
+					<img src="i/result_goat.gif" class="result" id="result3" />
+					<div class="curtain"><img src="i/door_curtain.png" /></div>
+					<div class="light light_rotation_0"></div>
+				</div>
+			</div>
+			
+			<div class="playinfo">
+				<div class="playtext">Wähle eine Tür!</div>
+			</div>
+		</div>		
+	</body>
+</html>
