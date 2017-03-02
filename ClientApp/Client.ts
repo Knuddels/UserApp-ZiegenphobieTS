@@ -1,7 +1,3 @@
-import { polyfillRequestAnimationFrame } from './requestAnimationFramePolyfill';
-
-polyfillRequestAnimationFrame();
-
 const LightManager = new class {
 
 	private lightIndex = 0;
