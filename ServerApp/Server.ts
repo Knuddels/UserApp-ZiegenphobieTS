@@ -31,11 +31,13 @@ class Server implements App {
 			this.isShuttingDown = true;
 			
 			for (let key in this.usersPlaying) {
-				const userId = KnuddelsServer.getUserId(key);
-				const user = KnuddelsServer.getUser(userId);
+				const userId = KnuddelsServer.getUserAccess().getUserId(key);
+				const user = KnuddelsServer.getUserAccess().getUserById(userId);
 				
 				KnuddelsServer.getDefaultBotUser().transferKnuddel(user, new KnuddelAmount(1), 'Die App fährt gleich herunter.');
-				user.removeAppContent();
+				user.getAppContentSessions().forEach((session: AppContentSession) => {
+					session.remove();
+				});
 				
 				delete this.usersPlaying[key];
 			}
@@ -103,7 +105,9 @@ class Server implements App {
 				setTimeout(() => {
 					const botNick = KnuddelsServer.getDefaultBotUser().getNick().escapeKCode();
 					user.sendPrivateMessage('Na, Lust auf _°BB>_hnoch eine Runde|/appknuddel ' + botNick + '<°°°_?');
-					user.removeAppContent();
+					user.getAppContentSessions().forEach((session: AppContentSession) => {
+						session.remove();
+					});
 					delete this.usersPlaying[user.getNick()];
 				}, 4000);
 			}, 1500);
